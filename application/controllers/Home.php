@@ -74,6 +74,11 @@ class Home extends CI_Controller
             // get the upload data
             $data = $this->upload->data();
 
+            // if file exists then delete it
+            if(file_exists($data['file_path'] . 'output.txt')) {
+                unlink($data['file_path'] . 'output.txt');
+            }
+
             // run shell command for tesseract library
             exec('tesseract ' . $data['full_path'] . ' ' . $data['file_path'] . 'output');
 
