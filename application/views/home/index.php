@@ -9,9 +9,9 @@
             <form method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="">File input ( gif, jpg, png) </label>
-                    <input type="file"  id="hin_file" name="hin_file" />
+                    <input type="file"  id="hin_file" name="hin_file"  />
                 </div>
-                <button type="submit" id="submit" class="btn btn-success">Submit</button>
+                <button type="submit" id="submit" class="btn btn-success" disabled>Submit</button>
                 <button type="button" id="clear" class="btn btn-primary">Clear</button>
             </form>
             <!-- Progress bar -->

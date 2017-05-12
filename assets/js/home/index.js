@@ -12,7 +12,6 @@ $(document).ready(function(){
         var control = $("#hin_file");
         control.removeAttr('disabled');
         control.val("");
-        $("#submit").removeAttr('disabled');
         $('.wrap_uploading_progress').hide();
         $('.col-md-5 > table').remove();
         $('.col-md-5 > h4').append("<p></p>");
@@ -39,6 +38,7 @@ $(document).ready(function(){
 
                 $('#sample_image').attr('src', e.target.result);
                 $('#sample_image').show();
+                $('#submit').removeAttr("disabled");
             }
             reader.readAsDataURL(input.files[0]);
         }
