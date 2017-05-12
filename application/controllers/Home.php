@@ -32,7 +32,18 @@ class Home extends CI_Controller
     {
 
         // set the view
-        $data['view'] = 'home/index';
+
+
+        $tesseract = shell_exec(sprintf("which tesseract"));
+
+        if(empty($tesseract)) {
+            $data['err'] = "Tesseract library is not installed.";
+            $data['view'] = 'home/errors';
+        } else {
+
+            $data['view'] = 'home/index';
+        }
+
 
         // Load the view
         $this->load->view('template/index', $data);
@@ -72,6 +83,7 @@ class Home extends CI_Controller
             // get the file content
             $file = fopen($data['file_path'] . 'output.txt', 'r');
 
+            $parseLines = array();
             // parsing content
             while( !feof($file)) {
 

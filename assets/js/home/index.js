@@ -8,6 +8,29 @@ $(document).ready(function(){
 
     var bar     = $('.progress-bar'); // progress bar element
 
+
+    $("#clear").click(function(){
+
+        var control = $("#hin_file");
+
+        control.removeAttr('disabled');
+        control.val("");
+        $("#submit").removeAttr('disabled');
+        $('.wrap_uploading_progress').hide();
+        $('.col-md-5 > table').remove();
+        $('.col-md-5 > h4').append("<p></p>");
+        var percentComplete = 0;
+        var percentVal = percentComplete + '%';
+        bar.width(percentVal);
+        bar.attr('aria-valuenow',percentComplete);
+        bar.text(percentComplete);
+
+        $('#sample_image').attr('src', '');
+        $('#sample_image').hide();
+
+
+    })
+
     $("#hin_file").change(function(){
         readURL(this);
     });
@@ -32,7 +55,7 @@ $(document).ready(function(){
         beforeSend: function(xhr){
 
             $('#hin_file').attr("disabled","disabled");
-            $('form button').attr("disabled","disabled");
+            $('#submit').attr("disabled","disabled");
         },
         uploadProgress: function (event, position, total, percentComplete){
 

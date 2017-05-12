@@ -18,7 +18,8 @@
                     <input type="file"  id="hin_file" name="hin_file" />
 
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" id="submit" class="btn btn-success">Submit</button>
+                <button type="button" id="clear" class="btn btn-primary">Clear</button>
 
             </form>
 
