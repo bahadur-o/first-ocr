@@ -3,7 +3,7 @@
 
 ## INTRODUCTION
 
-Image recorgnition OCR is the app to extract text from scanned document.
+Image recognition OCR is the app to extract text from scanned document.
 
 ## INSTALLATION
 
