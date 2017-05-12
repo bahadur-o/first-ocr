@@ -24,26 +24,23 @@ class Home extends CI_Controller
         $this->load->helper('form');
     }
 
-
     /**
      * index
      */
     public function index()
     {
 
-        // set the view
-
-
+        // check library tesseract installed
         $tesseract = shell_exec(sprintf("which tesseract"));
 
+        // if library not installed
         if(empty($tesseract)) {
             $data['err'] = "Tesseract library is not installed.";
             $data['view'] = 'home/errors';
-        } else {
+        } else { // if library installed
 
             $data['view'] = 'home/index';
         }
-
 
         // Load the view
         $this->load->view('template/index', $data);
@@ -95,6 +92,7 @@ class Home extends CI_Controller
                     $parseLines[] = preg_replace('/(\s|&#09;|&nbsp;)+/mu',' ',$line);
                 }
             }
+
             // sleep for 2 second and then delete the uploaded file
             sleep(2);
             unlink($data['full_path']);
