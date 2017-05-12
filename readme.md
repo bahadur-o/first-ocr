@@ -1,5 +1,5 @@
 
-# Image recognition OCR
+# IMAGE RECOGNITION OCR
 
 ## INTRODUCTION
 
