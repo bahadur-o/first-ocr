@@ -12,7 +12,7 @@ Run the app using browser ``http://[your localhost]/first-ocr``
 ## Dependacies
 
 
-tesseract-ocr library need to be installed on server.
+`tesseract-ocr` library need to be installed on your server.
 
 ### command for installing tesseract-ocr:
 ```
