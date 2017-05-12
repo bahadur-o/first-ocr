@@ -9,7 +9,7 @@ Image recorgnition OCR is the app to extract text from scanned document.
 
 get the code from repository https://github.com/bahadur-o/first-ocr and place the package on your localhost root director.
 Run the app using browser ``http://[your localhost]/first-ocr``
-## Dependacies
+## Dependencies
 
 
 `tesseract-ocr` library need to be installed on your server.
